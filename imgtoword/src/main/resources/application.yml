@@ -1,0 +1,11 @@
+server:
+  port: 8111
+  servlet:
+    context-path: /
+
+#设置上传大小限制
+spring:
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1

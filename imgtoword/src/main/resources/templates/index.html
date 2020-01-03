@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>上传</title>
+</head>
+<body>
+    <p th:text="${msg}" style="color: red"></p>
+    <a th:href="${downfile}" th:download="${downfile}"><p th:text="${down}" style="color: red"></p></a>
+    <!--<p th:text="${downfile}"></p>-->
+    <!--<p>单文件上传</p>
+    &lt;!&ndash; 测试文件上传和下载 &ndash;&gt;
+    <form action="imagetoword"
+          method="post" enctype="multipart/form-data">
+        <p>选择你要提取文字的图片:<input type="file" name="uploadfile" /></p>
+        <p> <input type="submit" value="上传"> </p>
+    </form>
+
+    <p>多文件上传</p>
+    &lt;!&ndash; 测试文件上传和下载 &ndash;&gt;
+    <form action="imagetowords"
+          method="post" enctype="multipart/form-data">
+        <p>选择你要提取文字的多张图片:<input type="file" name="uploadfiles" multiple="true"/></p>
+        <input type="hidden" id="directory" name="directory"/>
+        <p> <input type="submit" value="上传"> </p>
+    </form>
+
+    <p>文件上传，普通版。如果不需要改变字符，请选择该项上传</p>
+    &lt;!&ndash; 测试文件上传和下载 &ndash;&gt;
+    <form action="imagetoOrd"
+          method="post" enctype="multipart/form-data">
+        <p>选择你要提取文字的图片:<input type="file" name="uploadfile"/></p>
+        <p> <input type="submit" value="上传"> </p>
+    </form>
+
+    <p>文件上传到七牛云，普通版。如果不需要改变字符，请选择该项上传</p>
+    &lt;!&ndash; 测试文件上传和下载 &ndash;&gt;
+    <form action="/imgToWordsQiniu"
+          method="post" enctype="multipart/form-data">
+        <p>选择你要提取文字的图片:<input type="file" name="uploadQiniu"/></p>
+        <p> <input type="submit" value="上传"> </p>
+    </form>-->
+
+    <p>多文件上传到七牛云</p>
+    <!-- 测试文件上传和下载 -->
+    <form action="imagetoqiniu"
+          method="post" enctype="multipart/form-data">
+        <p>选择你要提取文字的多张图片:<input type="file" name="uploadfilestoQiniu" multiple="true"/></p>
+        <input type="hidden" id="directory1" name="directory"/>
+        <p> <input type="submit" value="上传"> </p>
+    </form>
+
+
+</body>
+</html>
